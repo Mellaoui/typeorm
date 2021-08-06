@@ -1,4 +1,9 @@
+import { HomeCotroller }from "./controller/HomeController";
 import {UserController} from "./controller/UserController";
+
+
+
+
 
 export const Routes = [{
     method: "get",
@@ -22,7 +27,19 @@ export const Routes = [{
     action: "remove"
 }, {
     method:"patch",
-    route:"/users/:id",
+    route:"/index",
     controller: UserController,
-    action:"update"
-}];
+    action:"function"
+}, {
+    method:"get",
+    route:"/",
+    controller:UserController,
+    action:"showIndex",
+}, {
+    method:"get",
+    route:"/guitars",
+    controller:UserController,
+    action:"showGuitars",
+}
+
+];
