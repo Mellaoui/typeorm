@@ -14,6 +14,8 @@ createConnection().then(async connection => {
 
     const port = process.env.SERVER_PORT;
     // create express app
+    app.use(express.static(__dirname + '/public'));
+   
     app.use(bodyParser.json());
     app.set('view engine', 'ejs');
     app.set('views',path.join( __dirname,'view'));
